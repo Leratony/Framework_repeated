@@ -4,8 +4,8 @@
 // PHP version 7.0.28
 // echo 'Requested URL = "' . $_SERVER['QUERY_STRING'] . '"';
 
-//Require the controller class
-// require '../App/Controllers/Posts.php';
+// Autoloader
+
 spl_autoload_register(function($class)
    {
     $root = dirname(__DIR__); //get the parent directory
