@@ -5,8 +5,7 @@
 // echo 'Requested URL = "' . $_SERVER['QUERY_STRING'] . '"';
 
 // Twig
-require_once dirname(__DIR__) . '/vendor/Twig/lib/Twig/Autoloader.php';
-Twig_Autoloader::register();
+require_once '../vendor/autoload.php';
 
 
 // Autoloader
