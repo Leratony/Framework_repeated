@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use \Core\View;
+
 //Posts controller
 // PHP version 7.0.28
 
@@ -12,9 +14,7 @@ class Posts extends \Core\Controller
 
     public function indexAction()
     {
-        echo 'Hello from the index action in the Posts controller!';
-        echo '<p> Query string parameters: <pre>' .
-         htmlspecialchars(print_r($_GET, true)) . '</pre></p>';
+        View::renderTemplate('Posts/index.html');
     }
 
 //Show the add new page
