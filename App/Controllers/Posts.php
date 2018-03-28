@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use \Core\View;
+use App\Models\Post;
 
 //Posts controller
 // PHP version 7.0.28
@@ -14,7 +15,11 @@ class Posts extends \Core\Controller
 
     public function indexAction()
     {
-        View::renderTemplate('Posts/index.html');
+        $posts = Post::getAll();
+
+        View::renderTemplate('Posts/index.html', [
+            'posts' => $posts
+        ]);
     }
 
 //Show the add new page

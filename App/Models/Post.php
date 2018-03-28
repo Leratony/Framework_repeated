@@ -27,11 +27,14 @@ use PDO;
          $password = 'admin';
 
          try {
-             $db = new PDO("mysql:host=$host; dbname=$dbname; charset=urf8", $username, $password);
-             $stmt = 4db -> query('SELECT id, title, content FROM posts ORDER BY created_at');
+             $db = new PDO("mysql:host=$host;dbname=$dbname;",
+             $username, $password);
+
+             $stmt = $db -> query('SELECT id, title, content FROM posts ORDER BY created_at');
              $results = $stmt -> fetchAll(PDO::FETCH_ASSOC);
 
              return $results;
+             
          } catch (PDOException $e) {
              echo $e -> getMessage();
          }
